@@ -16,7 +16,7 @@
   --text-color: hsl(var(--hue), 4%, 35%);
   --text-color-light: hsl(var(--hue), 4%, 55%);
   --body-color: hsl(var(--hue), 0%, 100%);
-  --container-color: #FFF;
+  --container-color: #4e9653;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -202,14 +202,14 @@ the website, in dark theme
 .nav__menu{
         position: fixed;
         background-color: var(--container-color);
-        width: 80%;
+        width: 60%;
         height: 100%;
         top: 0;
         right: -100%;
         box-shadow: -2px 0 4px hsla(var(--hue),24%, 15% ,.1 );
         padding: 4rem 0 0 3rem;
-        border-radius: 1rem 0 0 1rem;
-        transition: 3s;
+        border-radius: 4rem 0 0 1rem;
+        transition: 2s;
         z-index: var(--z-fixed);
          }
 }
@@ -219,6 +219,7 @@ the website, in dark theme
     top: 1rem;
     right: 1.25rem;
     cursor: pointer; 
+    color: red;
 }
 
 .nav__list{
@@ -246,18 +247,163 @@ the website, in dark theme
 
 
 /* Change background header */
-
+.scroll-header{
+  box-shadow: 0 1px 4px hsl(var(--hue),4% , 15%,0.1%);
+}
 
 /* Active link */
 
 
 /*=============== HOME ===============*/
+.home{
+  padding: 3.5rem 0 2rem;
+}
+.home__container{
+  position: relative;
+  row-gap: 2rem ;
+}
+.home__img{
+  width: 200px ;
+  justify-self: center;
+}
+.home__title{
+  font-size: var(--big-font-size);
+  line-height: 140%;
+  margin-bottom: var(--mb-1);
+}
+.home__description{
+  margin-bottom: var(--mb-2-5);
+
+}
+
+.home__social{
+  position: absolute;
+  top: 2rem;
+  right: -1rem ;
+  display: grid;
+  justify-items: center;
+  row-gap: 3.5rem ;
+
+}
+
+.home__social-follow{
+  font-weight: var(--font-medium);
+  font-size: var(--smaller-font-size);
+  color: var(--first-color);
+  position: relative;
+  transform: rotate(90deg);
+
+}
+
+.home__social-follow::after{
+  content: '';
+  position: absolute;
+  width: 1rem ;
+  height: 2px;
+  background-color: var(--first-color);
+  right: -45%;
+  top: 50%;
+}
+
+.home__social-links{
+  display: inline-flex;
+  
+  flex-direction: column;
+
+  row-gap: .25rem;
+}
+
+.home__social-link{
+  font-size: 1rem;
+  color: var(--first-color);
+  transition: .3s;
+}
+
+.home__social-link:hover{
+  transform: translateX(.25rem);
+
+}
+
+
+
+
+
+
+
+
 
 
 /*=============== BUTTONS ===============*/
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1rem 1.75rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  transition: .3s;
+
+}
+
+.button:hover{
+  border-color: var(--first-color-alt);
+
+
+}
+.button__icon{
+  transition: 0.3s;
+}
+
+.button:hover .button__icon{
+  transition: 0.3s;
+}
+
+.button--flex{
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+
+}
+
+.button--link{
+  color:var(--first-color);
+  font-weight: var(--font-medium);
+}
+.button--link:hover .button__icon{
+  transform: translateX(0.25rem);
+}
+
 
 
 /*=============== ABOUT ===============*/
+.about__container{
+  row-gap: 2rem;
+}
+.about__img{
+  width: 280px;
+  justify-self: center;
+}
+.about__title{
+  margin-bottom: var(--mb-1);
+}
+.about+description{
+  margin-bottom: var(--mb-1);
+}
+.about__details{
+  display: grid;
+  row-gap: 1rem;
+margin-bottom: var(--mb-2-5);
+}
+.about__details-description{
+  display: inline-flex;
+  column-gap: 0.5rem;
+  font-size: var(--small-font-size);
+}
+.about__details-icon{
+  font-size: 1rem;
+color: var(--first-color);
+margin-top: 0.15em;
+}
 
 
 /*=============== STEPS ===============*/
