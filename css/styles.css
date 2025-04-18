@@ -111,13 +111,60 @@ img{
 }
 
 /*=============== THEME ===============*/
-/*========== Variables Dark theme ==========*/
 
+
+
+
+/*========== Variables Dark theme ==========*/
+body.dark-theme{
+  --first-color-dark: hsl(var(--hue), 8%, 20%);
+  --title-color: hsl(var(--hue), 4%, 95%);
+  --text-color: hsl(var(--hue), 4%, 75%);
+  --body-color: hsl(var(--hue), 8%, 12%);
+  --container-color: hsl(var(--hue), 8%, 16%);
+}
+/*========== buttom Dark/light theme ==========*/
+.nav__dark {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  position: absolute;
+  left: 3rem;
+  bottom: 4rem;
+}
+
+.change-theme {
+  color: var(--title-color);
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+.nav__btns{
+display: inline-flex;
+align-items: center;
+column-gap: 1rem;
+}
+
+.change-theme-name {
+  font-size: var(--small-font-size);
+}
 
 /*========== 
 Color changes in some parts of 
 the website, in dark theme 
 ==========*/
+.dark-theme .steps__bg,
+.dark-theme .questions{
+  border-color: var(--first-color-dark);
+}
+
+.dark-theme .product__circle ,
+.dark-theme .footer__subscribe{
+  border-color: var(--container-color);
+}
+.dark-theme .scroll-header{
+  box-shadow: 0 1px 4px hsla(var(--hue),4%, 4% ,.3 );
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section{
@@ -157,7 +204,7 @@ the website, in dark theme
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-
+    transition: 0.4s;
 }
 
 /*=============== NAV ===============*/
@@ -252,6 +299,22 @@ the website, in dark theme
 }
 
 /* Active link */
+.active-link{
+  position: relative;
+  color: var(--first-color);
+
+}
+
+.active-link::after{
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  border-color: var(--first-color);
+}
+
 
 
 /*=============== HOME ===============*/
@@ -432,18 +495,230 @@ margin-top: 0.15em;
 
 /*=============== SCROLL UP ===============*/
 
+.scrollup{
+  position: fixed;
+  border-color: var(--first-color);
+  right: 1rem;
+  bottom: -30%;
+  display: inline-flex;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  z-index: var(--z-tooltip);
+  opacity: 0.8;
+  transition: 0.4s;
+}
+.scrollup__icon{
+  font-size: 1rem;
+  color: #fff;
+
+}
+
+.scrollup:hover{
+  border-color: var(--first-color);
+  opacity: 1;
+
+}
+
 
 /* Show Scroll Up*/
 
-
+.show-scroll{
+  bottom: 3rem;
+}
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background: hsl(var((--hue), 4% , 53%));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var((--hue), 4% , 29%));
+  border-radius: 0.5rem;
+}
+
 
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width:320px) {
+  .container{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+  .home__img{
+    width: 180px;
 
+  }
+  .home__title{
+    font-size: var(--h1-font-size);
+  }
+  .steps__bg{
+    padding: 2rem 1rem;
+  }
+  .steps__card{
+    padding: 1.5rem;
+  }
+  .product__container{
+    grid-template-columns: 0.6fr;
+    justify-content: center;
+  }
+  
+}
 
 /* For medium devices */
+@media screen and (max-width:576px){
+  .steps__container{
+    grid-template-columns: repeat(2 , 1fr);
+  }
+  .product__description{
+    padding: 0 4rem;
+  }
+  product__container{
+    grid-template-columns: repeat(2,170px);
+    justify-content: center;
+    column-gap: 5rem;
+  }
+  .footer__subscribe{
+    width: 400px;
+  }
+
+}
+
+
+@media  screen and (min-width:767px) {
+  body{
+    margin: 0;
+  }
+  .nav{
+    height: calc(var(--header-height) + 1.5rem);
+    column-gap: 3rem;
+  }
+  .nav__toggle, 
+  .nav__close{
+    display: none;
+  }
+
+  .nav__list{
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+  .nav__menu{
+    margin-left: auto;
+  }
+  .home__container,
+  .about__container,
+  .questions__continer,
+  .contact__container,
+  .footer__container{
+    grid-template-columns: repeat(2 , 1fr);
+  }
+  .home{
+    padding: 10rem 0 5rem;
+  }
+
+  .home__container{
+    align-items: center;
+  }
+  .home__img{
+    width: 280px;
+    order: 1;
+  }
+   .home__social{
+    top: 30%;
+   }
+
+  .questions__continer{
+    align-items: flex-start;
+  }
+  .footer__container{
+    column-gap: 3rem;
+  }
+  .footer__subscribe{
+    width: initial;
+  }
+
+}
 
 
 /* For large devices */
+@media screen and(min-width:992px) {
+.container{
+  margin-left: auto;
+  margin-right: auto;
+}
+  .section{
+    padding: 8rem 0 1rem;
+  }
+.section__title,
+.section__title-center{
+  font-size: var(--h1-font-size);
+
+}
+.home{
+  padding: 13rem 0 5rem;
+}
+.home__img{
+  width: 350px;
+}
+.home__description{
+
+  padding-right: 7rem;
+}
+.about__img{
+  width: 380px;
+}
+.steps__container{
+  grid-template-columns: repeat(3 , 1fr);
+}
+.steps__bg{
+  padding: 3.5rem 2.5rem;
+}
+.steps__card-totle{
+  font-size: var(--normal-font-size);
+}
+.product__description{
+  padding: 0 16rem;
+}
+.product__container{
+  padding: 4rem 0;
+  grid-template-columns: repeat(3 , 185px);
+  gap: 4rem 6rem;
+}
+.product__img{
+  width: 160px;
+}
+.product__circle{
+  width: 110px;
+  height: 110px;
+}
+.product__title,
+.product__price{
+ font-size: var(--normal-font-size);
+}
+.questions__continer{
+  padding: 1rem 0 4rem;
+}
+.questions__title{
+  text-align: initial;
+
+}
+.questions__group{
+  row-gap: 2rem;
+}
+.questions__header{
+  padding: 1rem;
+}
+.questions__description{
+  padding: 0 3.5rem 2.25rem 2.75rem;
+}
+.footer__logo{
+  font-size: var(--h3-font-size);
+}
+.footer__container{
+  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+}
+.footer__copy{
+  margin: 7rem 0 2rem;
+}
+
+}
