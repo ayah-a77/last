@@ -1,459 +1,640 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
-        <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- تأكد من إضافة رابط خط Montserrat في رأس HTML -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
 
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/styles.css">
 
-        <!--=============== REMIX ICONS ===============-->
+    <title>plants website</title>
+</head>
+<body>
+    <!--the questions-->
 
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+<div class="search-container">
+    <div class="search-box">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-btn">
+            <i class="ri-search-line"></i>
+        </button>
+    </div>
+</div>
+    <!-- Navigation Arrows -->
+    <div class="nav-arrows">
+        <button class="nav-arrow nav-arrow-left">
+            <i class="ri-arrow-left-line"></i>
+        </button>
+        <button class="nav-arrow nav-arrow-right">
+            <i class="ri-arrow-right-line"></i>
+        </button>
+    </div>
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="css/styles.css">
+    <!--==================== HEADER ====================-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <div class="nav__left-section">
+            <a href="#" class="nav__logo">
+                <span class="fixed-logo">AZ PLANTS</span>
+                <span class="logo__highlight"></span>
+            </a>
 
-        <title>Responsive plants website - Bedimcode</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-      
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">
-                    <i class="ri-leaf-line nav__logo-icon "> </i>AZ.Plants
-                </a>
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">Home</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">About</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#products" class="nav__link">Products</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#faqs" class="nav__link">FAQs</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contactus" class="nav__link">Contact Us</a>
-                        </li>
-                    </ul>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Products</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#faqs" class="nav__link">FAQs</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#cart" class="nav__link">Cart</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#signin" class="nav__link">Sign In</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#footer-contact" class="nav__link contact-us-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-                    <div class="nav__close" id="nav-close">
-                        <i class="ri-close-line"></i>
-                    </div>
+        <div class="nav__right-section">
+            <div class="nav__cart">
+                <i class="ri-shopping-cart-line nav__cart-icon"></i>
+                <span class="nav__cart-count">0</span>
+            </div>
+
+            <div class="nav__btns">
+                <i class="ri-moon-clear-line change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
                 </div>
-                <div class="nav__btns">
-                    <i class="ri-moon-clear-line change-theme" id="theme-button"></i>
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="ri-menu-line"></i>
-                </div>
-                
-            </nav>
-        </header>
+            </div>
+        </div>
 
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home" id="home">
-                <div class="home__container container grid">
-                    <img src="img/home.png" alt="" class="home__img">
+        <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+        </div>
+    </nav>
+</header>
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="section" id="home">
+            <div class="home__container container">
                 <div class="home__data">
                     <h1 class="home__title">
-                         Life In <br>LOVE<br> With Plants 
+                        Life in love with plants
                     </h1>
+                    
+                    <div class="home__stat">
+                        <span class="home__stat-number">280+</span>
+                        <span class="home__stat-text">Shops around all over the world</span>
+                    </div>
+                    
+                    <div class="home__categories">
+                        <span class="home__category">Plant</span>
+                        <span class="home__category">Accessories</span>
+                        <span class="home__category">Community</span>
+                        <span class="home__category">Shop</span>
+                    </div>
+                    
                     <p class="home__description">
-                        Create incredible plants design for your office or apastaments, Add freness to your new ideas. 
+                        Plants are mainly multicellular organisms, predominantly photosynthetic eukaryotes of the kingdom Plantae. Historically, plants were treated as one of two kingdoms including all living things that were not animals.
                     </p>
-                    <a href="#about" class="button button--flex">
-                        Explore <i class="ri-arrow-right-down-line button__icon"></i>
+                    
+                    <div class="home__divider"></div>
+                    
+                    <a href="#products" class="button button--flex home__shop-button">
+                        Show the shop <i class="ri-arrow-right-line button__icon"></i>
                     </a>
                 </div>
-              <div class="home__social">
-                <span class="home__social-follow">Follow Us</span>
-                <div class="home__social-link">
-                    <a href="https://www.facebook.com/share/1GpMqTGRYh/?mibextid=wwXIfr" target="_blank" class="home__social-link">
-                        <i class="ri-facebook-box-fill"></i>
-                    </a>
-                    <a href="https://www.instagram.com/_ay195?igsh=MW5pZG50cnY0eW1iag%3D%3D&utm_source=qr" target="_blank" class="home__social-link">
-                        <i class="ri-instagram-fill"></i>
-                    </a>
-                    <a href="https://x.com/ayahradi19?s=21" target="_blank" class="home__social-link">
-                        <i class="ri-twitter-x-fill"></i>
+                
+                <img src="img/home.png" alt="Plants illustration" class="home__img">
+            </div>
+        </section>
 
-                    </a>
-                </div>
-              </div>
-                </div>
-            </section> 
+        <!--==================== ABOUT ====================-->
+        <section class="section" id="about">
+            <div class="about__container container grid">
+                <img src="img/about.png" alt="" class="about__img">
 
-            <!--==================== ABOUT ====================-->
-            <section class="about section container" id="about">
-                <div class="container__grid">
-                    <img src="img/about.png" alt="" class="about__img">
-                    <div class="about__data">
-                        <h2 class="section__title about__title">
-                              Who We REALLY Are & <br> Why Choose Us?
-                        </h2>
-                        <p class="about__description">
-                            We have over +400 unbiased 
-                            reviews and our customers rust our plant process and delivary service every time.
-                        </p>
-                        <div class="about__details">
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Who we really are & <br> why choose us?
+                    </h2>
+
+                    <p class="about__description">
+                        We have over 4000+ unbiased reviews and our customers 
+                        trust our plant process and delivery service every time
+                    </p>
+
+                    <div class="about__details">
                         <p class="about__details-description">
-                            <i class="ri-checkbox-fill" about__details-icon></i>
+                            <i class="ri-checkbox-fill about__details-icon"></i>
                             We always deliver on time.
                         </p>
                         <p class="about__details-description">
-                            <i class="ri-checkbox-fill" about__details-icon></i>
-                            We give you guides to protect and core for your plants.
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            We give you guides to protect and care for your plants.
                         </p>
                         <p class="about__details-description">
-                            <i class="ri-checkbox-fill" about__details-icon></i>
+                            <i class="ri-checkbox-fill about__details-icon"></i>
                             We always come over for a check-up after sale.
                         </p>
                         <p class="about__details-description">
-                            <i class="ri-checkbox-fill" about__details-icon></i>
-                        100% money back guaranteed.
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            100% money back guaranteed.
                         </p>
-                     </div>
-                     <a href="#" class="button--link button--flex">
-                        Shop Now!<i class="ri-arrow-right-down-line button__icon"></i>
-                     </a>
                     </div>
+
+                    <a href="#" class="button--link button--flex">
+                        Shop Now <i class="ri-arrow-right-down-line button__icon"></i>
+                    </a>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!--==================== STEPS ====================-->
-            <section class="steps section container">
-                <div class="steps__bg">
-                    <h2 class="section__title-center steps__title">
-                        Steps to start your <br> plants off right
-                    </h2>
-
-                    <div class="steps__container grid">
-                        <div class="steps__card">
-                            <div class="steps__card-number">01</div>
-                            <h3 class="steps__card-title">Choose Plant</h3>
-                            <p class="steps__card-description">
-                                We have several varieties plants you can choose from.
-                            </p>
-                        </div>
-
-                        <div class="steps__card">
-                            <div class="steps__card-number">02</div>
-                            <h3 class="steps__card-title">Place an order</h3>
-                            <p class="steps__card-description">
-                                Once your order is set, we move to the next step which is the shipping.
-                            </p>
-                        </div>
-
-                        <div class="steps__card">
-                            <div class="steps__card-number">03</div>
-                            <h3 class="steps__card-title">Get plants delivered</h3>
-                            <p class="steps__card-description">
-                                Our delivery process is easy, you receive the plant direct to your door.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== PRODUCTS ====================-->
-            <section class="product section container" id="products">
-                <h2 class="section__title-center">
-                    Check out our <br> products
+        <!--==================== STEPS ====================-->
+        <section class="steps section container">
+            <div class="steps__bg">
+                <h2 class="section__title-center steps__title">
+                    Steps to start your <br> plants off right
                 </h2>
 
-                <p class="product__description">
-                    Here are some selected plants from our showroom, all are in excellent 
-                    shape and has a long life span. Buy and enjoy best quality.
-                </p>
+                <div class="steps__container grid">
+                    <div class="steps__card">
+                        <div class="steps__card-number">01</div>
+                        <h3 class="steps__card-title">Choose Plant</h3>
+                        <p class="steps__card-description">
+                            We have several varieties plants you can choose from.
+                        </p>
+                    </div>
 
-                <div class="product__container grid">
-                    <article class="product__card">
-                        <div class="product__circle"></div>
+                    <div class="steps__card">
+                        <div class="steps__card-number">02</div>
+                        <h3 class="steps__card-title">Place an order</h3>
+                        <p class="steps__card-description">
+                            Once your order is set, we move to the next step which is the shipping.
+                        </p>
+                    </div>
 
-                        <img src="img/product1.png" alt="" class="product__img">
+                    <div class="steps__card">
+                        <div class="steps__card-number">03</div>
+                        <h3 class="steps__card-title">Get plants delivered</h3>
+                        <p class="steps__card-description">
+                            Our delivery process is easy, you receive the plant direct to your door.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!--==================== PRODUCTS ====================-->
+        <section class="section" id="products">
+            <div class="products__container container">
+                <div class="products__header">
+                    <h2 class="section__title-center products__title">
+                        Products
+                    </h2>
+                  </div>
+
+            <div class="product__container grid">
+                <article class="product__card" data-id="1" data-stock="5">
+                    <div class="product__circle"></div>
+                    <img src="img/product1.png" alt="Cacti Plant" class="product__img">
+                    <div class="product__content">
                         <h3 class="product__title">Cacti Plant</h3>
                         <span class="product__price">$19.99</span>
-
+                        <div class="product__stock">
+                            <span class="stock__text">In Stock:</span>
+                            <span class="stock__quantity">5</span>
+                        </div>
                         <button class="button--flex product__button">
-                            <i class="ri-shopping-bag-line"></i>
+                            <i class="ri-shopping-bag-line"></i> Add to Cart
                         </button>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="product__card">
-                        <div class="product__circle"></div>
-
-                        <img src="img/product2.png" alt="" class="product__img">
-
+                <article class="product__card" data-id="2" data-stock="3">
+                    <div class="product__circle"></div>
+                    <img src="img/product2.png" alt="Cactus Plant" class="product__img">
+                    <div class="product__content">
                         <h3 class="product__title">Cactus Plant</h3>
                         <span class="product__price">$11.99</span>
-
+                        <div class="product__stock">
+                            <span class="stock__text">In Stock:</span>
+                            <span class="stock__quantity">3</span>
+                        </div>
                         <button class="button--flex product__button">
-                            <i class="ri-shopping-bag-line"></i>
+                            <i class="ri-shopping-bag-line"></i> Add to Cart
                         </button>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="product__card">
-                        <div class="product__circle"></div>
-
-                        <img src="img/product3.png" alt="" class="product__img">
-
+                <article class="product__card" data-id="3" data-stock="8">
+                    <div class="product__circle"></div>
+                    <img src="img/product3.png" alt="Aloe Vera Plant" class="product__img">
+                    <div class="product__content">
                         <h3 class="product__title">Aloe Vera Plant</h3>
                         <span class="product__price">$7.99</span>
-
+                        <div class="product__stock">
+                            <span class="stock__text">In Stock:</span>
+                            <span class="stock__quantity">8</span>
+                        </div>
                         <button class="button--flex product__button">
-                            <i class="ri-shopping-bag-line"></i>
+                            <i class="ri-shopping-bag-line"></i> Add to Cart
                         </button>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="product__card">
-                        <div class="product__circle"></div>
-
-                        <img src="img/product4.png" alt="" class="product__img">
-
+                <article class="product__card" data-id="4" data-stock="10">
+                    <div class="product__circle"></div>
+                    <img src="img/product4.png" alt="Succulent Plant" class="product__img">
+                    <div class="product__content">
                         <h3 class="product__title">Succulent Plant</h3>
                         <span class="product__price">$5.99</span>
-
+                        <div class="product__stock">
+                            <span class="stock__text">In Stock:</span>
+                            <span class="stock__quantity">10</span>
+                        </div>
                         <button class="button--flex product__button">
-                            <i class="ri-shopping-bag-line"></i>
+                            <i class="ri-shopping-bag-line"></i> Add to Cart
                         </button>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="product__card">
-                        <div class="product__circle"></div>
-
-                        <img src="img/product5.png" alt="" class="product__img">
-
+                <article class="product__card" data-id="5" data-stock="2">
+                    <div class="product__circle"></div>
+                    <img src="img/product5.png" alt="Succulent Plant" class="product__img">
+                    <div class="product__content">
                         <h3 class="product__title">Succulent Plant</h3>
                         <span class="product__price">$10.99</span>
-
+                        <div class="product__stock">
+                            <span class="stock__text">In Stock:</span>
+                            <span class="stock__quantity">2</span>
+                        </div>
                         <button class="button--flex product__button">
-                            <i class="ri-shopping-bag-line"></i>
+                            <i class="ri-shopping-bag-line"></i> Add to Cart
                         </button>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="product__card">
-                        <div class="product__circle"></div>
-
-                        <img src="img/product6.png" alt="" class="product__img">
-
+                <article class="product__card" data-id="6" data-stock="6">
+                    <div class="product__circle"></div>
+                    <img src="img/product6.png" alt="Green Plant" class="product__img">
+                    <div class="product__content">
                         <h3 class="product__title">Green Plant</h3>
                         <span class="product__price">$8.99</span>
-
+                        <div class="product__stock">
+                            <span class="stock__text">In Stock:</span>
+                            <span class="stock__quantity">6</span>
+                        </div>
                         <button class="button--flex product__button">
-                            <i class="ri-shopping-bag-line"></i>
+                            <i class="ri-shopping-bag-line"></i> Add to Cart
                         </button>
-                    </article>
-                </div>
-            </section>
-
-            <!--==================== QUESTIONS ====================-->
-            <section class="questions section" id="faqs">
-                <h2 class="section__title-center questions__title container">
-                    Some common questions <br> were often asked
-                </h2>
-                <div class="questions__container container grid">
-                    <div class="questions__group">
-                        <div class="questions__item">
-                            <header class="questions__header">
-                                <i class="ri-add-line questions__icon"></i>
-                                <h3 class="questions__item-title">
-                                    My flowers are falling off or dying?
-                                </h3>
-                            </header>
-
-                            <div class="questions__content">
-                                <p class="questions__description">
-                                    Plants are easy way to add color energy and transform your 
-                                    space but which planet is for you. Choosing the right plant.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="questions__item">
-                            <header class="questions__header">
-                                <i class="ri-add-line questions__icon"></i>
-                                <h3 class="questions__item-title">
-                                    What causes leaves to become pale?
-                                </h3>
-                            </header>
-
-                            <div class="questions__content">
-                                <p class="questions__description">
-                                    Plants are easy way to add color energy and transform your 
-                                    space but which planet is for you. Choosing the right plant.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="questions__item">
-                            <header class="questions__header">
-                                <i class="ri-add-line questions__icon"></i>
-                                <h3 class="questions__item-title">
-                                    What causes brown crispy leaves?
-                                </h3>
-                            </header>
-
-                            <div class="questions__content">
-                                <p class="questions__description">
-                                    Plants are easy way to add color energy and transform your 
-                                    space but which planet is for you. Choosing the right plant.
-                                </p>
-                            </div>
-                        </div>
                     </div>
+                </article>
 
-                    <div class="questions__group">
-                        <div class="questions__item">
-                            <header class="questions__header">
-                                <i class="ri-add-line questions__icon"></i>
-                                <h3 class="questions__item-title">
-                                    How do i choose a plant?
-                                </h3>
-                            </header>
-
-                            <div class="questions__content">
-                                <p class="questions__description">
-                                    Plants are easy way to add color energy and transform your 
-                                    space but which planet is for you. Choosing the right plant.
-                                </p>
-                            </div>
+                <article class="product__card" data-id="7" data-stock="4">
+                    <div class="product__circle"></div>
+                    <img src="img/product7.png" alt="AA Plant" class="product__img">
+                    <div class="product__content">
+                        <h3 class="product__title">AA Plant</h3>
+                        <span class="product__price">$22</span>
+                        <div class="product__stock">
+                            <span class="stock__text">In Stock:</span>
+                            <span class="stock__quantity">4</span>
                         </div>
-
-                        <div class="questions__item">
-                            <header class="questions__header">
-                                <i class="ri-add-line questions__icon"></i>
-                                <h3 class="questions__item-title">
-                                    How do I change the pots?
-                                </h3>
-                            </header>
-
-                            <div class="questions__content">
-                                <p class="questions__description">
-                                    Plants are easy way to add color energy and transform your 
-                                    space but which planet is for you. Choosing the right plant.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="questions__item">
-                            <header class="questions__header">
-                                <i class="ri-add-line questions__icon"></i>
-                                <h3 class="questions__item-title">
-                                    Why are gnats flying around my plant?
-                                </h3>
-                            </header>
-
-                            <div class="questions__content">
-                                <p class="questions__description">
-                                    Plants are easy way to add color energy and transform your 
-                                    space but which planet is for you. Choosing the right plant.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== CONTACT ====================-->
-            <section class="contact section container" id="contact">                
-                <div class="contact__container grid">
-                    <div class="contact__box">
-                        <h2 class="section__title">
-                            Reach out to us today <br> via any of the given <br> information
-                        </h2>
-
-                        <div class="contact__data">
-                            <div class="contact__information">
-                                <h3 class="contact__subtitle">Call us for instant support</h3>
-                                <span class="contact__description">
-                                    <i class="ri-phone-line contact__icon"></i>
-                                    +999 888 777
-                                </span>
-                            </div>
-
-                            <div class="contact__information">
-                                <h3 class="contact__subtitle">Write us by mail</h3>
-                                <span class="contact__description">
-                                    <i class="ri-mail-line contact__icon"></i>
-                                    user@email.com
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <form action="" class="contact__form">
-                        <div class="contact__inputs">
-                            <div class="contact__content">
-                                <input type="email" placeholder=" " class="contact__input">
-                                <label for="" class="contact__label">Email</label>
-                            </div>
-
-                            <div class="contact__content">
-                                <input type="text" placeholder=" " class="contact__input">
-                                <label for="" class="contact__label">Subject</label>
-                            </div>
-
-                            <div class="contact__content contact__area">
-                                <textarea name="message" placeholder=" " class="contact__input"></textarea>                              
-                                <label for="" class="contact__label">Message</label>
-                            </div>
-                        </div>
-
-                        <button class="button button--flex">
-                            Send Message
-                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i> Add to Cart
                         </button>
-                    </form>
-                </div>
-            </section>
-        </main>
+                    </div>
+                </article>
 
+                <article class="product__card" data-id="8" data-stock="7">
+                    <div class="product__circle"></div>
+                    <img src="img/product8.png" alt="ZZ Plant" class="product__img">
+                    <div class="product__content">
+                        <h3 class="product__title">ZZ Plant</h3>
+                        <span class="product__price">$6</span>
+                        <div class="product__stock">
+                            <span class="stock__text">In Stock:</span>
+                            <span class="stock__quantity">7</span>
+                        </div>
+                        <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i> Add to Cart
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product__card" data-id="9" data-stock="0">
+                    <div class="product__circle"></div>
+                    <img src="img/product9.png" alt="Peace Lily" class="product__img">
+                    <div class="product__content">
+                        <h3 class="product__title">Peace Lily</h3>
+                        <span class="product__price">$7.5</span>
+                        <div class="product__stock">
+                            <span class="stock__text">In Stock:</span>
+                            <span class="stock__quantity">0</span>
+                        </div>
+                        <div class="sold-out-text">Sold Out</div>
+                        <button class="button--flex product__button sold-out" disabled>
+                            <i class="ri-close-line"></i> Sold Out
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product__card" data-id="10" data-stock="9">
+                    <div class="product__circle"></div>
+                    <img src="img/product10.png" alt="Pathoss" class="product__img">
+                    <div class="product__content">
+                        <h3 class="product__title">Pathoss</h3>
+                        <span class="product__price">$12</span>
+                        <div class="product__stock">
+                            <span class="stock__text">In Stock:</span>
+                            <span class="stock__quantity">9</span>
+                        </div>
+                        <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i> Add to Cart
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product__card" data-id="11" data-stock="1">
+                    <div class="product__circle"></div>
+                    <img src="img/product11.png" alt="Jade Plant" class="product__img">
+                    <div class="product__content">
+                        <h3 class="product__title">Jade Plant</h3>
+                        <span class="product__price">$10.99</span>
+                        <div class="product__stock">
+                            <span class="stock__text">In Stock:</span>
+                            <span class="stock__quantity">1</span>
+                        </div>
+                        <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i> Add to Cart
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product__card" data-id="12" data-stock="0">
+                    <div class="product__circle"></div>
+                    <img src="img/product12.png" alt="Boston Plant" class="product__img">
+                    <div class="product__content">
+                        <h3 class="product__title">Boston Plant</h3>
+                        <span class="product__price">$14.3</span>
+                        <div class="product__stock">
+                            <span class="stock__text">In Stock:</span>
+                            <span class="stock__quantity">0</span>
+                        </div>
+                        <div class="sold-out-text">Sold Out</div>
+                        <button class="button--flex product__button sold-out" disabled>
+                            <i class="ri-close-line"></i> Sold Out
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!--==================== QUESTIONS ====================-->
+        <section class="section" id="faqs">
+            <div class="questions__title-container">
+            <h2 class="section__title-center">
+
+                <ul>S</ul>
+                <ul>O</ul>
+                <ul>M</ul>
+                <ul>E</ul>
+                <ul></ul>
+                <ul>Q</ul>
+                <ul>U</ul>
+                <ul>E</ul>
+                <ul>S</ul>
+                <ul>T</ul>
+                <ul>I</ul>
+                <ul>O</ul>
+                <ul>N</ul>
+                <ul>S</ul>
+                <ul>!</ul>
+            </h2>
+        </div>
+            <div class="questions__container container grid">
+                <div class="questions__group">
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                My flowers are falling off or dying?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Plants are easy way to add color energy and transform your 
+                                space but which planet is for you. Choosing the right plant.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                What causes leaves to become pale?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Plants are easy way to add color energy and transform your 
+                                space but which planet is for you. Choosing the right plant.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                What causes brown crispy leaves?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Plants are easy way to add color energy and transform your 
+                                space but which planet is for you. Choosing the right plant.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="questions__group">
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                How do i choose a plant?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Plants are easy way to add color energy and transform your 
+                                space but which planet is for you. Choosing the right plant.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                How do I change the pots?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Plants are easy way to add color energy and transform your 
+                                space but which planet is for you. Choosing the right plant.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                Why are gnats flying around my plant?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Plants are easy way to add color energy and transform your 
+                                space but which planet is for you. Choosing the right plant.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== CART ====================-->
+       <!--==================== CART ====================-->
+<section class="section" id="cart">
+    <div class="cart__container container">
+        <div class="cart__header">
+            <h2 class="section__title-center cart__title">
+                Cart
+            </h2>
+            <div class="cart__title-shadow">Cart</div>
+        </div>
+
+        <div class="cart__content">
+            <div class="cart__items grid"></div>
+            
+            <div class="cart__summary">
+                <div class="cart__total">
+                    <span>Total:</span>
+                    <span class="cart__total-price">$0.00</span>
+                </div>
+                <button class="button button--flex cart__checkout">
+                    Checkout <i class="ri-arrow-right-line button__icon"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="cart__empty">
+            <i class="ri-shopping-cart-line cart__empty-icon"></i>
+            <p class="cart__empty-text">Your cart is empty</p>
+            <a href="#products" class="button button--flex cart__empty-button">
+                Add Products <i class="ri-arrow-right-line button__icon"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+        <!--==================== SIGN IN ====================-->
+        <!--==================== SIGN IN ====================-->
+<section class="section" id="signin">                
+    <div class="signin__container">
+        <div class="signin__frames">
+            <div class="signin__frame signin__frame--1"></div>
+            <div class="signin__frame signin__frame--2"></div>
+            <div class="signin__frame signin__frame--3"></div>
+            <div class="signin__frame signin__frame--4"></div>
+        </div>
+        
+        <div class="signin__form-container">
+            <h2 class="signin__title">Login</h2>
+            
+            <form class="signin__form">
+                <div class="signin__input-group">
+                    <div class="signin__icon-container">
+                        <i class="ri-user-line"></i>
+                    </div>
+                    <input type="text" class="signin__input" placeholder="Username" required>
+                </div>
+                
+                <div class="signin__input-group">
+                    <div class="signin__icon-container">
+                        <i class="ri-lock-line"></i>
+                    </div>
+                    <input type="password" class="signin__input" placeholder="Password" required>
+                </div>
+                
+                <button type="submit" class="signin__button">
+                    Sign In <i class="ri-arrow-right-line"></i>
+                </button>
+                
+                <div class="signin__links">
+                    <a href="#" class="signin__link">Forgot password?</a>
+                    <a href="#" class="signin__link">Create account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
         <!--==================== FOOTER ====================-->
-        <footer class="footer section">
+        <footer class="section" id="contact" style="background-color: #a3c585;">
             <div class="footer__container container grid">
                 <div class="footer__content">
                     <a href="#" class="footer__logo">
                         <i class="ri-leaf-line footer__logo-icon"></i> AZ.PLANTS
                     </a>
-
-                    <h3 class="footer__title">
-                        Subscribe to our newsletter <br> to stay update
-                    </h3>
-
-                    <div class="footer__subscribe">
-                        <input type="email" placeholder="Enter your email" class="footer__input">
-
-                        <button class="button button--flex footer__button">
-                            Subscribe
-                            <i class="ri-arrow-right-up-line button__icon"></i>
-                        </button>
-                    </div>
                 </div>
 
                 <div class="footer__content">
                     <h3 class="footer__title">Our Address</h3>
 
                     <ul class="footer__data">
-                        <li class="footer__information">1234 - Peru</li>
-                        <li class="footer__information">La Libertad - 43210</li>
-                        <li class="footer__information">123-456-789</li>
+                        <li class="footer__information">Palestine</li>
+                        <li class="footer__information">Nablus</li>
+                        <li class="footer__information">056-8124341</li>
                     </ul>
                 </div>
 
-                <div class="footer__content">
+                <div class="footer__content" id="footer-contact">
                     <h3 class="footer__title">Contact Us</h3>
 
                     <ul class="footer__data">
-                        <li class="footer__information">+999 888 777</li>
+                        <li class="footer__information">+970-568-124-341</li>
                         
                         <div class="footer__social">
                             <a href="https://www.facebook.com/" class="footer__social-link">
@@ -482,20 +663,18 @@
                     </div>
                 </div>
             </div>
-
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
         </footer>
 
         <!--=============== SCROLL UP ===============-->
-        
         <a href="#" class="scrollup" id="scroll-up">
             <i class="ri-arrow-up-line scrollup__icon"></i>
         </a>
+    </main>
 
-        <!--=============== SCROLL REVEAL ===============-->
-        <script src=""></script>
-        
-        <!--=============== MAIN JS ===============-->
-        <script src="js/main.js"></script>
-    </body>
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="js/scrollreveal.min.js"></script>
+    
+    <!--=============== MAIN JS ===============-->
+    <script src="js/main.js"></script>
+</body>
 </html>
